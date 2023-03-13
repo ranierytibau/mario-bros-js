@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Silkscreen', cursive;
+}
+
+.game-board {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    border-bottom: 15px solid #34d41e;
+    margin: 0 auto;
+    overflow: hidden;
+    background-image: linear-gradient(179.4deg, rgba(33, 150, 243, 1) 1.8%, rgba(22, 255, 245, 0.60) 97.1%);
+}
+
+h1 {
+    position: absolute;
+    width: 93.7rem;
+    font-size: 3.7rem;
+    text-align: center;
+    color: #ff0000;
+    bottom: 50%;
+    left: 10%;
+    z-index: 1;
+}
+
+.game-over {
+    display: none;
+}
+
+h4 {
+    position: absolute;
+    color: #fff;
+    z-index: 1;
+    font-size: 1.5rem;
+    font-weight: bold;
+    top: 1.8rem;
+    left: 1.8rem;
+}
+
+.lives {
+    position: absolute;
+    color: white;
+    z-index: 1;
+    font-size: 1.5rem;
+    font-weight: bold;
+    top: 3.7rem;
+    left: 4rem;
+}
+
+.x {
+    position: absolute;
+    color: #fff;
+    z-index: 1;
+    font-size: 1.5rem;
+    font-weight: bold;
+    top: 3.7rem;
+    left: 1.8rem;
+}
+
+.pipe {
+    position: absolute;
+    bottom: -0.9rem;
+    width: 5rem;
+    animation: pipe-animation 3000ms linear infinite;
+}
+
+.second-pipe {
+    width: 5rem;
+    bottom: -0.9rem;
+    position: absolute;
+    left: 79%;
+}
+
+.bullet {
+    position: absolute;
+    bottom: 3.7rem;
+    width: 8rem;
+    animation: pipe-animation 8500ms linear infinite;
+}
+
+.mario {
+    position: absolute;
+    bottom: 0px;
+    width: 5.3rem;
+
+}
+
+.clouds {
+    position: absolute;
+    animation: cloud-animation 10s infinite linear;
+    top: 5rem;
+    width: 28.1rem;
+}
+
+.second-clouds {
+    position: absolute;
+    animation: cloud-animation 20s infinite linear;
+    top: 2.5rem;
+    width: 20rem;
+}
+
+.plant {
+    width: 40px;
+    bottom: 50px;
+    position: absolute;
+    left: 80%;
+}
+
+.coin-case {
+    width: 3.1rem;
+    height: 3.1rem;
+    position: absolute;
+    top: 70%;
+    left: 20%
+}
+
+.coin-case-2 {
+    width: 3.1rem;
+    height: 3.1rem;
+    position: absolute;
+    top: 73%;
+    left: 30%
+}
+
+.coin-case-3 {
+    width: 3.1rem;
+    height: 3.1rem;
+    position: absolute;
+    top: 65%;
+    left: 60%
+}
+
+.block-case {
+    width: 3.7rem;
+    height: 3.7rem;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+}
+
+.block-case-2 {
+    width: 3.7rem;
+    height: 3.7rem;
+    position: absolute;
+    top: 72%;
+    left: 70%;
+}
+
+
+.coins-1 {
+    position: absolute;
+    width: 1.2rem;
+    left: 1.2rem;
+}
+
+.coins-2 {
+    position: absolute;
+    width: 1.2rem;
+    left: 3.1rem;
+}
+
+.coins-3 {
+    position: absolute;
+    width: 1.2rem;
+    left: 5rem;
+}
+
+.coins-4 {
+    position: absolute;
+    width: 1.2rem;
+    left: 6.8rem;
+}
+
+.block-1 {
+    position: absolute;
+    width: 1.2rem;
+    left: 6.8rem;
+}
+
+.block-2 {
+    position: absolute;
+    width: 1.2rem;
+    left: 7.8rem;
+}
+
+.block-3 {
+    position: absolute;
+    width: 1.2rem;
+    left: 8.7rem;
+}
+
+.block-4 {
+    position: absolute;
+    width: 1.2rem;
+    left: 9.6rem;
+}
+
+.block-5 {
+    position: absolute;
+    width: 1.2rem;
+    left: 10.6rem;
+}
+
+.block-6 {
+    position: absolute;
+    width: 1.2rem;
+    left: 11.5rem;
+}
+
+.block-7 {
+    position: absolute;
+    width: 1.2rem;
+    left: 12.5rem;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -5rem;
+    }
+
+    to {
+        right: 100%
+    }
+}
+
+@keyframes jump {
+
+    0% {
+        bottom: 0
+    }
+
+    40% {
+        bottom: 11.25rem;
+    }
+
+    50% {
+        bottom: 11.25rem;
+    }
+
+    60% {
+        bottom: 11.25rem;
+    }
+
+    100% {
+        bottom: 0
+    }
+}
+
+@keyframes cloud-animation {
+    from {
+        right: -28.1rem
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@media (500px <=width <=1000px) {
+
+    .pipe {
+        animation: pipe-animation 2700ms linear infinite;
+        ;
+    }
+
+    .bullet {
+        animation: pipe-animation 8000ms linear infinite;
+    }
+}
